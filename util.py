@@ -45,4 +45,62 @@ def load_data(data_name, ratio = [0.7, 0.1]):
     val_w = wdata[:,int(ratio[0]*data.shape[1]):int((ratio[0] + ratio[1])*data.shape[1])]
     test_w = wdata[:, int((ratio[0] + ratio[1])*data.shape[1]):]    
     return adj, training_data, val_data, test_data, training_w, val_w, test_w
+
+def masked_mse(preds, labels, null_val=np.nan):
+    if np.isnan(null_val):
+        mask = ~torch.isnan(labels)
+    else:
+        mask = (labels!=null_val)
+    mask = mask.float()
+    mask /= torch.mean((mask))
+    mask = torch.where(torch.isnan(mask), torch.zeros_like(mask), mask)
+    loss = (preds-labels)**2
+    loss = loss * mask
+    loss = torch.where(torch.isnan(loss), torch.zeros_like(loss), loss)
+    return torch.mean(loss)
+
+def masked_rmse(preds, labels, null_val=np.nan):
+    return torch.sqrt(masked_mse(preds=preds, labels=labels, null_val=null_val))
+
+
+def masked_mae(preds, labels, null_val=np.nan):
+    if np.isnan(null_val):
+        mask = ~torch.isnan(labels)
+    else:
+        mask = (labels!=null_val)
+    mask = mask.float()
+    mask /=  torch.mean((mask))
+    mask = torch.where(torch.isnan(mask), torch.zeros_like(mask), mask)
+    loss = torch.abs(preds-labels)
+    loss = loss * mask
+    loss = torch.where(torch.isnan(loss), torch.zeros_like(loss), loss)
+    return torch.mean(loss)
+
+def masked_wmae(preds, labels, weights, null_val=np.nan):
+    if np.isnan(null_val):
+        mask = ~torch.isnan(labels)
+    else:
+        mask = (labels!=null_val)
+    mask = mask.float()
+    mask /=  torch.mean((mask))
+    mask = torch.where(torch.isnan(mask), torch.zeros_like(mask), mask)
+    loss = torch.abs(preds-labels)
+    loss = loss * mask * weights
+    loss = torch.where(torch.isnan(loss), torch.zeros_like(loss), loss)
+    return torch.mean(loss)
+
+
+
+def masked_mape(preds, labels, null_val=np.nan):
+    if np.isnan(null_val):
+        mask = ~torch.isnan(labels)
+    else:
+        mask = (labels!=null_val)
+    mask = mask.float()
+    mask /=  torch.mean((mask))
+    mask = torch.where(torch.isnan(mask), torch.zeros_like(mask), mask)
+    loss = torch.abs(preds-labels)/labels
+    loss = loss * mask
+    loss = torch.where(torch.isnan(loss), torch.zeros_like(loss), loss)
+    return torch.mean(loss)
         
