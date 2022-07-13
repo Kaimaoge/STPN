@@ -19,7 +19,7 @@ from model import STPN
 parser = argparse.ArgumentParser()
 parser.add_argument('--device',type=str,default='cuda:0',help='')
 parser.add_argument('--data',type=str,default='US',help='data type')
-parser.add_argument("--train_val_ratio", nargs="+", default=[0.7, 0.1], help='hidden layer dimension')
+parser.add_argument("--train_val_ratio", nargs="+", default=[0.7, 0.1], help='train/val/test ratio', type=float)
 parser.add_argument('--h_layers',type=int,default=2,help='number of hidden layer')
 parser.add_argument('--in_channels',type=int,default=2,help='input variable')
 parser.add_argument("--hidden_channels", nargs="+", default=[128, 64, 32], help='hidden layer dimension', type=int)
