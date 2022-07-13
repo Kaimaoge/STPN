@@ -22,7 +22,7 @@ parser.add_argument('--data',type=str,default='US',help='data type')
 parser.add_argument("--train_val_ratio", nargs="+", default=[0.7, 0.1], help='hidden layer dimension')
 parser.add_argument('--h_layers',type=int,default=2,help='number of hidden layer')
 parser.add_argument('--in_channels',type=int,default=2,help='input variable')
-parser.add_argument("--hidden_channels", nargs="+", default=[128, 64, 32], help='hidden layer dimension')
+parser.add_argument("--hidden_channels", nargs="+", default=[128, 64, 32], help='hidden layer dimension', type=int)
 parser.add_argument('--out_channels',type=int,default=2,help='output variable')
 parser.add_argument('--emb_size',type=int,default=16,help='time embedding size')
 parser.add_argument('--dropout',type=float,default=0,help='dropout rate')
@@ -41,7 +41,6 @@ parser.add_argument('--out_len',type=int,default=12,help='output time series len
 parser.add_argument('--batch',type=int,default=32,help='training batch size')
 parser.add_argument('--episode',type=int,default=50,help='training episodes')
 parser.add_argument('--period',type=int,default=36,help='periodic for temporal embedding')
-
 
 
 args = parser.parse_args()
