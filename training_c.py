@@ -32,7 +32,7 @@ parser.add_argument('--time_d',type=int,default=4,help='normalizing factor for s
 parser.add_argument('--heads',type=int,default=4,help='number of attention heads')
 parser.add_argument('--support_len',type=int,default=3,help='number of spatial adjacency matrix')
 parser.add_argument('--order',type=int,default=2,help='order of diffusion convolution')
-parser.add_argument('--num_weather',type=int,default=8,help='number of weather condition')
+parser.add_argument('--num_weather',type=int,default=7,help='number of weather condition')
 parser.add_argument('--use_se', type=str, default=True,help="use SE block")
 parser.add_argument('--use_cov', type=str, default=True,help="use Covariate")
 parser.add_argument('--decay', type=float, default=1e-5, help='decay rate of learning rate ')
