@@ -6,7 +6,7 @@
 
 About this Project
 --------------
-We develop a space-time separable multi-graph convolutional networks for learning airport network delay propagation patterns. The model is applied to multi-step ahead arrival and departure delay prediction. The aim of this project relates to a fundamental question in spatiotemporal modeling -- **how to accurate and efficient model spatiotemporal dependencies**.
+We develop a space-time separable multi-graph convolutional networks for learning airport network delay propagation patterns. The model is applied to multi-step ahead arrival and departure delay prediction. The aim of this project relates to a fundamental question in spatiotemporal modeling -- **how to accurately and efficiently model spatiotemporal dependencies**.
 
 Dataset
 --------------
