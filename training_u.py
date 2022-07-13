@@ -8,13 +8,12 @@ Created on Tue Jul 12 16:36:04 2022
 import torch
 import util
 import argparse
-import baseline_methods
 import random
 import copy
 import torch.optim as optim
 import numpy as np
 
-from baseline_methods import test_error
+from baseline_methods import test_error, StandardScaler
 from model import STPN
 
 parser = argparse.ArgumentParser()
@@ -54,7 +53,7 @@ def main():
                  args.order, args.num_weather, args.use_se, args.use_cov).to(device)
     supports = [torch.tensor(i).to(device) for i in adj]
     optimizer = optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.decay)
-    scaler = baseline_methods.StandardScaler(training_data[~np.isnan(training_data)].mean(), training_data[~np.isnan(training_data)].std())
+    scaler = StandardScaler(training_data[~np.isnan(training_data)].mean(), training_data[~np.isnan(training_data)].std())
     training_data = scaler.transform(training_data)
     training_data[np.isnan(training_data)] = 0
     
