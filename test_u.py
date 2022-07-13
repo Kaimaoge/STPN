@@ -15,7 +15,7 @@ from baseline_methods import test_error, StandardScaler
 parser = argparse.ArgumentParser()
 parser.add_argument('--device',type=str,default='cuda:0',help='')
 parser.add_argument('--data',type=str,default='US',help='data type')
-parser.add_argument("--train_val_ratio", nargs="+", default=[0.7, 0.1], help='hidden layer dimension')
+parser.add_argument("--train_val_ratio", nargs="+", default=[0.7, 0.1], help='train/test/val ratio', type=float)
 parser.add_argument('--in_len',type=int,default=12,help='input time series length')
 parser.add_argument('--out_len',type=int,default=12,help='output time series length')
 parser.add_argument('--period',type=int,default=36,help='periodic for temporal embedding')
