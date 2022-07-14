@@ -30,7 +30,7 @@ This example shows that the complexity of spatiotemporal dependencies within air
 
 The proposed model leverages the spatiotemporal propagation patterns learned from historical departure/arrival delays and external factors (weather conditions) to forecast the long-term future departure/arrival delays. The propagation patterns are learned by space-time separable multi-graph convolution, which considers the joint space-time interaction between airports. The given figure illustrates the basic building block of STPN. The effects of geographic proximity, weather conditions, and traffic volume on delay propagation are incorporated into STPN.
 
-Example commands for certification
+Example commands for running our model
 --------------
 
 To use the code, please first obtain the datasets from [Baidu drive](https://pan.baidu.com/s/13siqq4ffpxhvootkJKvgbw)(code: vz59). Then place China and US datasets in cdata and udata respectively. The original datasets are collected from [U.S. Bureau of Transportation Statistics](https://www.transtats.bts.gov) and [Xiecheng](https://pan.baidu.com/s/1dEPyMGh#list/path=\%2F).
