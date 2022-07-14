@@ -33,7 +33,7 @@ The proposed model leverages the spatiotemporal propagation patterns learned fro
 Example commands for certification
 --------------
 
-To use the code, please first obtain the datasets from [Baidu drive](https://pan.baidu.com/s/13siqq4ffpxhvootkJKvgbw)(code: vz59). Then place China and US datasets in cdata and udata respectively. The original datasets are collected from [U.S. Bureau of Transportation Statistics](https://www.transtats.bts.gov/DL SelectFields.asp?gnoyr VQ=) and [Xiecheng](https://pan.baidu.com/s/1dEPyMGh#list/path=\%2F).
+To use the code, please first obtain the datasets from [Baidu drive](https://pan.baidu.com/s/13siqq4ffpxhvootkJKvgbw)(code: vz59). Then place China and US datasets in cdata and udata respectively. The original datasets are collected from [U.S. Bureau of Transportation Statistics](https://www.transtats.bts.gov) and [Xiecheng](https://pan.baidu.com/s/1dEPyMGh#list/path=\%2F).
 
 We can train a U.S airport delay forecastor as following:
 
