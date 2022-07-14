@@ -7,3 +7,5 @@ weather2016_2021.npy --- normal weather 0, severe cold 1, fog 2, hail 3, rain 4,
 
 adj_mx.npy --- distance adjacency matrix
 od_pair.npy --- origin-destination flow adjacency matrix
+
+USA.csv --- IATA 3-Letter Codes of 70 USA Airports. The order is corresponding their order in the npys. 
