@@ -7,3 +7,5 @@ weather_cn.npy --- normal weather 0, rain 1, cloud 2, thunderstorm 3, fog 4, sto
 
 dist_mx.npy --- distance adjacency matrix
 od_pair.npy --- origin-destination flow adjacency matrix
+
+CHina.csv --- IATA 3-Letter Codes of 50 China Airports. The order is corresponding to their order in the npys.
