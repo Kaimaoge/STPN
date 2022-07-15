@@ -1,12 +1,14 @@
-# STPN_ariport_delay
+# Spatiotemporal Propagation Learning for Network-Wide Flight Delay Prediction
 
 [![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
 ![Python 3.9](https://img.shields.io/badge/Python-3.9-blue.svg)
 [![GitHub stars](https://img.shields.io/github/stars/Kaimaoge/STPN.svg?logo=github&label=Stars&logoColor=white)](https://github.com/Kaimaoge/STPN)
 
+This is the code corresponding to the experiments conducted for our paper ["Spatiotemporal Propagation Learning for Network-Wide Flight Delay Prediction"](https://arxiv.org/abs/2207.06959)
+
 About this Project
 --------------
-We develop a space-time separable multi-graph convolutional network for learning airport network delay propagation patterns. The model is applied to multi-step ahead arrival and departure delay prediction. The aim of this project relates to a fundamental question in spatiotemporal modeling -- **how to accurately and efficiently model spatiotemporal dependencies**.
+We develop a space-time separable multi-graph convolutional network for learning airport network delay propagation patterns. The model is applied to multi-step ahead arrival and departure delay prediction. The aim of this project relates to a fundamental question in spatiotemporal modeling -- **how to accurately and efficiently model spatiotemporal dependencies**. 
 
 Dataset
 --------------
