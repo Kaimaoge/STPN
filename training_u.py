@@ -66,7 +66,7 @@ def main():
     
     print("start training...",flush=True)
     
-    for i in range(1,1+args.episode):
+    for ep in range(1,1+args.episode):
         random.shuffle(batch_index)
         for j in range(len(batch_index) // args.batch - 1):
             trainx = []
