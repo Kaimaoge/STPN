@@ -44,12 +44,12 @@ if __name__ ==  '__main__':
     test_normalize_statistic = {"mean": test_mean.tolist(), "std": test_std.tolist()} # data_leakage
     train_set = ForecastDataset(train_data, window_size=12, horizon=12,
                             normalize_method='z_score', norm_statistic=train_normalize_statistic)
-    test_set = ForecastTestDataset(test_data, window_size=12, horizon=12, begin_time = begin_time,
+    val_set = ForecastTestDataset(valid_data, window_size=12, horizon=12, begin_time = begin_time,
                                 normalize_method='z_score', norm_statistic=test_normalize_statistic)
     
     train_loader = DataLoader(train_set, batch_size=32, drop_last=False, shuffle=True,
                                         num_workers=1)
-    test_loader = DataLoader(test_set, batch_size=32, shuffle=False, num_workers=1)
+    test_loader = DataLoader(val_set, batch_size=32, shuffle=False, num_workers=1)
     
     data_d = np.reshape(data, [data.shape[0]//288, 288, data.shape[1]])
     daily_trend = np.mean(data_d, axis = 0)
