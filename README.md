@@ -57,3 +57,23 @@ For testing
 python test_u.py --in_len 6
 ```
 You can change the length of input sequence, since we use a self-attention model to learn temporal dependencies. The length of the inputs does not significantly influence our model.
+
+Additional results on forecasting traffic flow
+--------------
+| \multicolumn{2}{c}{Methods} | \multirow{2}{*}{SVR} | \multirow{2}{*}{LSTM} | \multirow{2}{*}{STGCN} | \multirow{2}{*}{Gwave} | \multirow{2}{*}{STFGNN} | \multirow{2}{*}{AGCRN} | \multirow{2}{*}{STPN} |
+|-----------------------------|----------------------|-----------------------|------------------------|------------------------|-------------------------|------------------------|-----------------------|
+| Datasets                    | Metrics              |                       |                        |                        |                         |                        |                       |                  |
+| \multirow{3}{}{PeMS03}      | MAE                  | 21.07                 | 21.33                  | 17.49                  | 19.85                   | 16.77                  | 15.98                 | {\textbf{15.74}} |
+|                             | MAPE                 | 21.07                 | 23.33                  | 17.15                  | 19.31                   | 16.30                  | {\textbf{15.23}}      | 16.40            |
+|                             | RMSE                 | 35.29                 | 35.11                  | 30.12                  | 19.31                   | 28.34                  | 28.25                 | {\textbf{24.63}} |
+| \multirow{3}{}{PeMS04}      | MAE                  | 28.70                 | 27.14                  | 22.70                  | 25.45                   | {\textbf{19.83}}       | {\textbf{19.83}}      | 20.38            |
+|                             | MAPE                 | 19.20                 | 18.20                  | 14.59                  | 17.29                   | 13.02                  | {\textbf{12.97}}      | 13.28            |
+|                             | RMSE                 | 44.56                 | 41.59                  | 35.55                  | 39.70                   | {\textbf{31.88}}       | 32.30                 | 32.52            |
+| \multirow{3}{}{PeMS07}      | MAE                  | 32.49                 | 29.98                  | 25.38                  | 26.85                   | 22.07                  | 22.37                 | {\textbf{22.29}} |
+|                             | MAPE                 | 14.26                 | 13.20                  | 11.08                  | 12.12                   | 9.21                   | 9.21                  | 9.61             |
+|                             | RMSE                 | 50.22                 | 45.84                  | 38.78                  | 42.78                   | 35.80                  | 36.55                 | {\textbf{34.97}} |
+| \multirow{3}{}{PeMS08}      | MAE                  | 23.25                 | 22.20                  | 18.02                  | 19.13                   | 16.64                  | {\textbf{15.95}}      | 16.50            |
+|                             | MAPE                 | 14.64                 | 14.20                  | 11.40                  | 12.68                   | 10.60                  | {\textbf{10.09}}      | 10.54            |
+|                             | RMSE                 | 36.16                 | 34.06                  | 27.83                  | 31.05                   | 26.22                  | {\textbf{25.22}}      | 25.90            |
+
+
