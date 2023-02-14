@@ -60,6 +60,9 @@ You can change the length of input sequence, since we use a self-attention model
 
 Additional results on forecasting traffic flow
 --------------
+
+STPN also is a competitive forecastor for general spatiotemporal forecasting task.
+
 | Methods | SVR | LSTM | STGCN | Gwave | STFGNN | AGCRN | STPN |
 |-----------------------------|----------------------|-----------------------|------------------------|------------------------|-------------------------|------------------------|-----------------------|
 | Datasets                    | Metrics              |                       |                        |                        |                         |                        |                       |                  |
