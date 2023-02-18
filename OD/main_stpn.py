@@ -54,15 +54,15 @@ training_input, training_target = generate_dataset(train_original_data,
                                                     num_timesteps_input=num_timesteps_input,
                                                     num_timesteps_output=num_timesteps_output)
 
-val_input, val_target = generate_dataset(test_original_data,
+val_input, val_target = generate_dataset(val_original_data,
                                             num_timesteps_input=num_timesteps_input,
                                             num_timesteps_output=num_timesteps_output)
 
 V_in = []
 V_out = []
 for j in range(val_input.shape[0]):
-    in_temp = torch.arange(split_line2 + j, (split_line2 + j + num_timesteps_input))
-    out_temp = torch.arange((split_line2 + j + num_timesteps_input), (split_line2 + j + num_timesteps_input + num_timesteps_output) )
+    in_temp = torch.arange(split_line1 + j, (split_line1 + j + num_timesteps_input))
+    out_temp = torch.arange((split_line1 + j + num_timesteps_input), (split_line1 + j + num_timesteps_input + num_timesteps_output) )
     V_in.append((in_temp % 96).unsqueeze(0))
     V_out.append((out_temp % 96).unsqueeze(0))
 V_in = torch.concat(V_in).to(device=device)
