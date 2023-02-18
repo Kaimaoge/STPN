@@ -32,7 +32,7 @@ if __name__ ==  '__main__':
     train_data = data[:int(train_ratio * len(data))]
     valid_data = data[int(train_ratio * len(data)):int((train_ratio + valid_ratio) * len(data))]
     test_data = data[int((train_ratio + valid_ratio) * len(data)):]
-    begin_time = int((train_ratio + valid_ratio) * len(data))
+    begin_time = int((train_ratio) * len(data))
     train_mean = np.mean(train_data, axis=0)
     train_std = np.std(train_data, axis=0)
     train_normalize_statistic = {"mean": train_mean.tolist(), "std": train_std.tolist()}
