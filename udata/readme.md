@@ -1,4 +1,4 @@
-The US delay dataset is collected from [the U.S. Bureau of Transportation Statistics (BTS) database][(https://www.transtats.bts.gov/DL SelectFields.asp?gnoyr VQ=].
+The US delay dataset is collected from [the U.S. Bureau of Transportation Statistics (BTS) database][https://www.transtats.bts.gov/DL SelectFields.asp?gnoyr VQ=].
 
 udelay.npy --- delay[:,;,0] arrival delay
           --- delay[:,:,1] departure delay
